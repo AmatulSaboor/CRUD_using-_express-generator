@@ -54,7 +54,7 @@
                                     <td><%= user.phone %></td>
                                     <td>
                                         <a onclick = "openModalEditUser(<%= JSON.stringify(user)%>)" href="#editUserModal" class="edit" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Edit">&#xE254;</i></a>
-                                        <a href="http://localhost:3000/delete/<%=user._id%>" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
+                                        <a href="/delete/<%=user._id%>" class="delete"><i class="material-icons" title="Delete">&#xE872;</i></a>
                                     </td>
                                 </tr>
                             <% } %>
@@ -67,7 +67,7 @@
         <div id="addUserModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form method="POST" action="http://localhost:3000/add">
+                    <form method="POST" action="/add">
                         <div class="modal-header">						
                             <h2 class="modal-title">Add User</h2>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
@@ -102,7 +102,7 @@
         <div id="editUserModal" class="modal fade">
             <div class="modal-dialog">
                 <div class="modal-content">
-                    <form method="POST" action="http://localhost:3000/edit">
+                    <form method="POST" action="/edit">
                         <div class="modal-header">						
                             <h2 class="modal-title">Edit User</h2>
                             <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
